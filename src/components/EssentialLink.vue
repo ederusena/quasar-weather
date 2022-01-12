@@ -1,8 +1,8 @@
 <template>
   <q-item
     clickable
+    @click="router"
     tag="a"
-    target="_blank"
     :href="link"
   >
     <q-item-section
@@ -31,7 +31,10 @@ export default defineComponent({
       type: String,
       required: true
     },
-
+    router: {
+      type: String,
+      required: true
+    },
     caption: {
       type: String,
       default: ''
